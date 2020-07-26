@@ -53,10 +53,9 @@ int32_t main() {
 		cout << "Case #" << _tt + 1 << ": ";
 		ll n, m;
 		cin >> n >> k;
-		ll a[n];
+		long long * a = new long long[n];
+		long long * dp = new long long[n];
 		scan(a, n);
-		ll dp[n];
-		// dp[n] = hell;
 
 		multiset<ll> s;
 		dp[n - 1] = 0;
@@ -86,7 +85,6 @@ int32_t main() {
 		rep(i, 0, min(n, k + 1), 1)	z = min(z, dp[i]);
 
 		if (z >= hell)	z = -1;
-
 		cout << z << "\n";
 	}
 }
